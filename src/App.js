@@ -13,9 +13,9 @@ function App() {
   ])
 
   const updateUserEnteredData = (expenseData) => {
-    setExpenses([
-      ...expenses,
-      expenseData
+    setExpenses((prevExpenses) => [
+      expenseData,
+      ...prevExpenses
     ])
   }
 
